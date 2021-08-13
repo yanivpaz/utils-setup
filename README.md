@@ -1,7 +1,6 @@
-# aws-cloudshell
-cloudshell addons . 
+# Quick installation of common tools
 
-## Common K8s utils for AWS
+## Common K8S utils for AWS
 ```
 curl -s https://raw.githubusercontent.com/yanivpaz/utils-setup/main/install-k8s-utils.sh |bash
 ```
