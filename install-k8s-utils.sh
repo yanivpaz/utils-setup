@@ -13,7 +13,8 @@ fi
 if [ ! -f /usr/local/bin/helm ]
 then
  echo "Installing helm"
- sudo yum install openssl -y
+ # todo : add for AML ?
+ # sudo yum install openssl -y
  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
  chmod 700 get_helm.sh
  ./get_helm.sh
