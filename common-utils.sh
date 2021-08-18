@@ -28,6 +28,7 @@ then
  sudo mv /tmp/eksctl /usr/local/bin
 fi 
 
+sudo pip3 install  awscli --upgrade 
 
 if [ ! -f /usr/local/bin/scheduler-cli ]
 then
@@ -35,6 +36,7 @@ sudo pip3 install --upgrade --force-reinstall setuptools
   curl -LO https://s3.amazonaws.com/solutions-reference/aws-instance-scheduler/latest/scheduler-cli.zip
  unzip -o scheduler-cli.zip
  sudo -E python3 setup.py install
+ sudo -E pip install testresource -y
  rm -f scheduler-cli.zip
 fi 
 
@@ -58,9 +60,9 @@ then
  rm -rf k9s.tar.gz
 fi
 
-EKS_CLUSTER=`aws eks list-clusters --output text |tail -1 | awk '{print $2}'|tail -1`
-KUBECONFIG="aws eks update-kubeconfig --name $EKS_CLUSTER"
-eval echo $KUBECONFIG
+#EKS_CLUSTER=`aws eks list-clusters --output text |tail -1 | awk '{print $2}'|tail -1`
+#KUBECONFIG="aws eks update-kubeconfig --name $EKS_CLUSTER"
+#eval echo $KUBECONFIG
 
 # example
 # awslogs get scheduler-instance-logs -S  -G --timestamp -w
