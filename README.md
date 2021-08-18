@@ -2,7 +2,7 @@
 
 ## Common K8S utils for AWS
 ```
-curl -s https://raw.githubusercontent.com/yanivpaz/utils-setup/main/install-k8s-utils.sh |bash
+curl -s https://raw.githubusercontent.com/yanivpaz/utils-setup/main/common-utils.sh |bash
 ```
 
 
